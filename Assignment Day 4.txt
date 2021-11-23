@@ -1,0 +1,133 @@
+1) How to compare two JSON have the same properties without order?
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+solution : 
+
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+var flag=true;
+
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1) { 
+        if(obj1[key] == obj2[key]) {
+            continue;
+        }
+        else {
+            flag=false;
+            break;
+        }
+    }
+}
+else {
+    flag=false;
+}
+console.log("is object equal: "+ flag);
+
+output: is object equal: true
+
+--------------------------------------------------------------------------------------------------------
+4) Task 1: Simple Programs todo for variables
+Declare four variables without assigning values and print them in console
+
+solution : 
+let myName;
+let myAge;
+let myAddress;
+let myPhoneNumber;
+console.log(myAge="21",myName="arul",myAddress="abc_street",myPhoneNumber="123456789")
+-----------------------------------------------------------------------------------------------------
+How to get value of the variable myvar as output
+var myvar= 1;
+console.log("myvar");
+
+solution :
+var myvar= 1;
+console.log(myvar);
+
+----------------------------------------------------------------------------------------------
+3. Declare variables to store your first name, last name, marital status, country and age in multiple lines
+
+let first_name = "Arul"; 
+let last_name = "selvi";
+let martial_status = "married";
+let country = "India";
+let age = 26;
+
+let multilineString = `
+my name is: ${first_name} ${last_name}
+my marital status : ${martial_status}
+my country : ${country}
+my age is: ${age}
+`;
+
+console.log(multilineString);
+
+output :
+my name is: Arul selvi
+my marital status : married
+my country : India
+my age is: 26
+------------------------------------------------------------------------------------------------------------------
+4. Declare variables to store your first name, last name, marital status, country and age in a single line
+
+var firstName= "Arul",lastName = "Selvi",marital_status="married",country="India",age=35;
+console.log(firstName)
+
+-------------------------------------------------------------------------------------------------------------
+5. Declare variables and assign string, boolean, undefined and null data types
+var a = 'Hi there!'; // String datatype
+var isReading = true;   // boolean datatype
+var c; // undefined datatype
+var a = null; // Null datatype
+
+---------------------------------------------------------------------------------------------------
+6. Convert the string to integer
+parseInt()
+Number()
+Plus sign(+)
+
+solution:
+myString = '129' 
+console.log(parseInt(myString)) // expected result: 129
+
+number() : 
+Number("10"); // returns 10
+
+plus sign(+):
+const x = 25;
+const y = -25;
+console.log(+x); // expected output: 25
+console.log(+y); // expected output: -25
+---------------------------------------------------------------------------------------------------
+7. Write 6 statement which provide truthy & falsey values.
+
+let x;
+x = 1;   // x is a number
+x = '1'; // x is a string
+x = [1]; // x is an array
+// all true
+1 == '1';
+1 == [1];
+'1' == [1];
+
+// all false
+1 === '1';
+1 === [1];
+'1' === [1];
+
+// all true
+false == 0;
+0 == '';
+null == undefined;
+[] == false;
+!![0] == true;
+
+// all false
+false == null;
+NaN == NaN;
+Infinity == true;
+[] == true;
+[0] == true;
+----------------------------------------------------------------------------------
+
